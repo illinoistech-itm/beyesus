@@ -2,11 +2,12 @@
 
 # Biruk Eyesus
 
-## ![ME](/Users/birukeyesus/Desktop/ITMO-453/beyesus/itmo-453/week-01/images/IMG_1802.jpg "Me")
+# Here is a picture of me
 
 ![IMG_1802](https://user-images.githubusercontent.com/7771250/131198887-5a9e46a3-7223-4ddf-8f7d-6b754c117bf3.jpg)
 
-![I love Coffee](itmo-453/week-01/images/IMG_07212.JPG "Coffee")
+# What I love is coffee in all its forms. 
+![IMG_07212](https://user-images.githubusercontent.com/7771250/131199085-400f7745-970d-46ec-ae68-8603e7a3a996.JPG)
 
 ## Where are you from?
 

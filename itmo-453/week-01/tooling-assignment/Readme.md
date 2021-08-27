@@ -51,7 +51,7 @@ After installing an IDE editor of your choice, pick one of the listed or you can
 ## Packer Managers for MacOS
 
 Brew is the MacOS 3rd party package manager located at: [https://brew.sh/](https://brew.sh/ "brew installer page"). Place a screenshot of the output of ```brew --version```.
-![Brew Version](week-01/images/Screen-Shot-2021-08-27.png "Brew Install")
+<img width="525" alt="Screen-Shot-2021-08-27" src="https://user-images.githubusercontent.com/7771250/131199092-38d50e83-375f-4021-8554-6f922171200f.png">
 
 ## Installation of Bash 5 on MacOS
 
@@ -76,7 +76,7 @@ git config --global user.name "<Your Name>"
 git config --global user.email "<youremail@example.com>"
 ```
 
-![Bash version and Git Version](week-01/images/Screen-Shot-2021-08-26.png?raw=true "Tools")
+<img width="564" alt="Screen-Shot-2021-08-26" src="https://user-images.githubusercontent.com/7771250/131199090-7ba52dd9-6a6c-4446-9bab-4f54a4298806.png">
 
 ## Install IDE editor MacOS
 
