@@ -51,11 +51,8 @@ After installing an IDE editor of your choice, pick one of the listed or you can
 ## Packer Managers for MacOS
 
 Brew is the MacOS 3rd party package manager located at: [https://brew.sh/](https://brew.sh/ "brew installer page"). Place a screenshot of the output of ```brew --version```.
-<<<<<<< HEAD
 ![Brew Version](week-01/images/Screen-Shot-2021-08-27.png "Brew Install")
-=======
 
->>>>>>> 6a703fc2eac2a65512752bf2886ad469664b05c3
 ## Installation of Bash 5 on MacOS
 
 Using Homebrew install Bash 5.0+ on MacOS and activate it to replace Bash 3.x
@@ -78,11 +75,9 @@ You will need to configure Git if you already haven't done so.  From a shell run
 git config --global user.name "<Your Name>"
 git config --global user.email "<youremail@example.com>"
 ```
-<<<<<<< HEAD
-![Bash version and Git Version](week-01/images/Screen-Shot-2021-08-26.png "Tools")
-=======
 
->>>>>>> 6a703fc2eac2a65512752bf2886ad469664b05c3
+![Bash version and Git Version](week-01/images/Screen-Shot-2021-08-26.png "Tools")
+
 ## Install IDE editor MacOS
 
 
