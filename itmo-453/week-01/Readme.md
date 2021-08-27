@@ -2,9 +2,9 @@
 
 # Biruk Eyesus
 
-![ME](week-01/images/IMG_1802.jpg"Me")
+![ME](images/IMG_1802.jpg"Me")
 
-![I love Coffee](week-01/images/IMG_0866.JPG"Coffee")
+![I love Coffee](images/IMG_0866.JPG"Coffee")
 
 ## Where are you from?
 
