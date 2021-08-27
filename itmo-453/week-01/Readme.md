@@ -2,7 +2,9 @@
 
 # Biruk Eyesus
 
-![ME](/Users/birukeyesus/Desktop/ITMO-453/beyesus/itmo-453/week-01/images/IMG_1802.jpg "Me")
+## ![ME](/Users/birukeyesus/Desktop/ITMO-453/beyesus/itmo-453/week-01/images/IMG_1802.jpg "Me")
+
+![IMG_1802](https://user-images.githubusercontent.com/7771250/131198887-5a9e46a3-7223-4ddf-8f7d-6b754c117bf3.jpg)
 
 ![I love Coffee](itmo-453/week-01/images/IMG_07212.JPG "Coffee")
 
