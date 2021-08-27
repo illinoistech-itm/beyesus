@@ -60,7 +60,7 @@ Using Homebrew install Bash 5.0+ on MacOS and activate it to replace Bash 3.x
 ## Installation of a Terminal for MacOS
 
 A Terminal is a way to run multiple shell and cmd line windows in a single managed window.  You can install iterm2 via Homebrew.
-
+<img src="/Users/birukeyesus/Desktop/ITMO-453/beyesus/itmo-453/week-01/Screen Shot 2021-08-27 at 1.27.06 PM.png" >
 [iterm2](https://iterm2.com/ "MacOS shell terminal")
 
 ## Install Git for MacOS
@@ -69,7 +69,7 @@ Using the package manager from the previous step, install the Git Client if you 
 Place a screenshot of the output of the command: ```git --version```
 
 You will need to configure Git if you already haven't done so.  From a shell run these two commands:
-
+<img src="/Users/birukeyesus/Desktop/ITMO-453/beyesus/itmo-453/week-01/Screen Shot 2021-08-26 at 6.17.13 PM.png" >
 ```bash
 
 git config --global user.name "<Your Name>"
