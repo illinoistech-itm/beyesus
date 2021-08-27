@@ -76,7 +76,7 @@ git config --global user.name "<Your Name>"
 git config --global user.email "<youremail@example.com>"
 ```
 
-![Bash version and Git Version](week-01/images/Screen-Shot-2021-08-26.png "Tools")
+![Bash version and Git Version](week-01/images/Screen-Shot-2021-08-26.png?raw=true "Tools")
 
 ## Install IDE editor MacOS
 
