@@ -4,7 +4,7 @@
 
 ![ME](week-01/images/IMG_1802.jpg"Me")
 
-![I love Coffee](week-01/images/IMG_07212.JPG"Coffee")
+![I love Coffee](itmo-453/week-01/images/IMG_07212.JPG"Coffee")
 
 ## Where are you from?
 
