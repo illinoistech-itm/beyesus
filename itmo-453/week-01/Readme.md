@@ -4,7 +4,7 @@
 
 ![ME](images/IMG_1802.jpg"Me")
 
-![I love Coffee](images/IMG_0866.JPG"Coffee")
+![I love Coffee](images/IMG_07212.JPG"Coffee")
 
 ## Where are you from?
 
