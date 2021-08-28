@@ -2,11 +2,11 @@
 
 # Biruk Eyesus
 
-# Here is a picture of me
+## Here is a picture of me
 
 ![IMG_1802](https://user-images.githubusercontent.com/7771250/131198887-5a9e46a3-7223-4ddf-8f7d-6b754c117bf3.jpg)
 
-# What I love is coffee in all its forms. 
+## What I love is ***coffee*** in all its forms. 
 ![IMG_07212](https://user-images.githubusercontent.com/7771250/131199085-400f7745-970d-46ec-ae68-8603e7a3a996.JPG)
 
 ## Where are you from?
