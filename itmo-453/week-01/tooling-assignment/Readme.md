@@ -53,6 +53,7 @@ After installing an IDE editor of your choice, pick one of the listed or you can
 Brew is the MacOS 3rd party package manager located at: [https://brew.sh/](https://brew.sh/ "brew installer page"). Place a screenshot of the output of ```brew --version```.
 <img width="525" alt="Screen-Shot-2021-08-27" src="https://user-images.githubusercontent.com/7771250/131199092-38d50e83-375f-4021-8554-6f922171200f.png">
 
+![ScreenShot](images/Screen-Shot-2021-08-27.png "BREW BASH trial")
 ## Installation of Bash 5 on MacOS
 
 Using Homebrew install Bash 5.0+ on MacOS and activate it to replace Bash 3.x
