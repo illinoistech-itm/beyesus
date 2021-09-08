@@ -20,6 +20,8 @@ Inside that file place these values:
 ## Install VirtualBox
 
 If you do not already have VirtualBox 6.x installed, use the package manager to install VirtualBox.  Take a screenshot of the VirtualBox > Help > About VirtualBox output. You can use Chocolatey and Homebrew to install VirtualBox on MacOS and Windows. 
+<img width="1042" alt="Screen Shot 2021-09-08 at 4 01 15 PM" src="https://user-images.githubusercontent.com/7771250/132585063-106eb314-19c3-46ee-b300-d49305ddfe57.png">
+
 
 ## Install Vagrant
 
@@ -28,10 +30,12 @@ Using a package manager, install the latest version of [Vagrant](https://vagrant
 Complete the Vagrant tutorial located at [https://learn.hashicorp.com/collections/vagrant/getting-started](https://learn.hashicorp.com/collections/vagrant/getting-started "Vagrant tutorial"), you can skip the INSTALL section as we are installing using a package manager and skip the SHARE ENVIRONMENT section.  
 
 After completing this tutorial take a screenshot of the output of the command ```vagrant box list```
+<img width="569" alt="Screen Shot 2021-09-08 at 4 02 48 PM" src="https://user-images.githubusercontent.com/7771250/132585194-c050aef4-2be5-48f5-87cd-4ce5e8b7a80c.png">
 
 ## Install Packer.io
 
 Using a package manager, install the latest version of [Packer](https://packer.io "Packer install site").  If you have a version > 1.6.x you will be ok. Note, if on Linux, do not use the built in package manager as these versions of Vagrant and Packer are too old and unmaintained.  Place a screenshot of the output of the command: ```packer --version```
+<img width="566" alt="packer-version" src="https://user-images.githubusercontent.com/7771250/132584712-ae83169b-c4bc-4887-b66e-cc1339b4e851.png">
 
 I have a series of samples that I use from Packer to build images.  Clone this sample repo to your computer: ```git clone https://github.com/illinoistech-itm/jhajek```.  If you have previously clone this repo - `cd` into your local repository and issue this command: `git pull`.  You only need to clone once, then to update issue the `git pull` command.  Navigate to the ```packer-example-code``` directory from the command line.  Issue the command: ```packer build .```
 
@@ -45,6 +49,8 @@ Now that you have built your own machine image or artifact.  We need to initiali
 ### First Step
 
 Lets `cd` to the build directory where the \*.box file is located (the output of your Packer build command) and add this \*.box file to Vagrant for management.  Issue the command: ```vagrant box add ./ubuntu-20042-live-server*.box```
+<img width="642" alt="Screen Shot 2021-09-02 at 3 22 35 PM" src="https://user-images.githubusercontent.com/7771250/132584829-3bea9371-7643-4d4c-86eb-4c263490d8bc.png">
+
 <img width="769" alt="Screen Shot 2021-09-02 at 3 36 22 PM" src="https://user-images.githubusercontent.com/7771250/132584266-d886ceae-058c-4a2f-927f-ebfe6cdc8130.png">
 
 ### Second Step
