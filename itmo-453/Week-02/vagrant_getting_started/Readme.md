@@ -36,6 +36,7 @@ Using a package manager, install the latest version of [Packer](https://packer.i
 I have a series of samples that I use from Packer to build images.  Clone this sample repo to your computer: ```git clone https://github.com/illinoistech-itm/jhajek```.  If you have previously clone this repo - `cd` into your local repository and issue this command: `git pull`.  You only need to clone once, then to update issue the `git pull` command.  Navigate to the ```packer-example-code``` directory from the command line.  Issue the command: ```packer build .```
 
 Take a screenshot of the output of the ```build``` directory showing the ```*.box``` file.
+<img width="819" alt="Screen Shot 2021-09-02 at 12 34 13 PM" src="https://user-images.githubusercontent.com/7771250/132584206-c8ade601-8cd6-4d25-b287-9996054b31d5.png">
 
 ## Initialize the Built Artifact
 
@@ -44,13 +45,16 @@ Now that you have built your own machine image or artifact.  We need to initiali
 ### First Step
 
 Lets `cd` to the build directory where the \*.box file is located (the output of your Packer build command) and add this \*.box file to Vagrant for management.  Issue the command: ```vagrant box add ./ubuntu-20042-live-server*.box```
+<img width="769" alt="Screen Shot 2021-09-02 at 3 36 22 PM" src="https://user-images.githubusercontent.com/7771250/132584266-d886ceae-058c-4a2f-927f-ebfe6cdc8130.png">
 
 ### Second Step
 
 In the ```build``` directory, create a directory named **ubuntu-focal-2001-vanilla**.  Lets ```cd``` into that directory and issue the command: ```vagrant init ubuntu-focal-2001-vanilla```.
+<img width="565" alt="vagrant-box-list" src="https://user-images.githubusercontent.com/7771250/132584305-9826efcb-71b1-41f3-b6d8-cb4ac5b9e2a3.png">
 
 ### Third Step
 
 To start the VM lets type the same command: ```vagrant up```.  Upon the vm starting succesfully, let us type the commmand: ```vagrant ssh``` to connect to the instance we built via SSH.
 
 ***Deliverable*** Take a screenshot of the your VM right after you have completed the `vagrant ssh` command.
+<img width="1005" alt="vagrant-up-ssh" src="https://user-images.githubusercontent.com/7771250/132584338-4eaa1956-ca67-4203-90cc-44ad4fa73cc7.png">
