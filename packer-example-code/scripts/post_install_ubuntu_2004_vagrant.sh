@@ -13,7 +13,7 @@ sudo usermod -a -G admin vagrant
 wget --no-check-certificate 'https://raw.githubusercontent.com/hashicorp/vagrant/main/keys/vagrant.pub'
 sudo mkdir -p /home/vagrant/.ssh
 sudo chown -R vagrant:vagrant /home/vagrant/.ssh
-cat ./vagrant.pub >> /home/vagrant/.ssh/authorized_keyss
+cat ./vagrant.pub >> /home/vagrant/.ssh/authorized_keys
 sudo chown -R vagrant:vagrant /home/vagrant/.ssh/authorized_keys
 echo "All Done!"
 
@@ -23,9 +23,9 @@ echo "All Done!"
 sudo hostnamectl set-hostname riemannc8
 sudo cat <<EOT>> /tec/hosts
 # Nodes
-192.168.33.100 riemanna riemanna.example.com
-192.168.33.102 riemannb riemannb.example.com
-192.168.33.103 riemannc8 riemannc8.example.com
+192.168.33.100  riemanna riemanna.example.com
+192.168.33.101  riemannb riemannb.example.com
+192.168.33.102  riemannmc riemannmc.example.com
 EOT
 sudo apt-get update -y
 sudo apt-get install -y openjdk-8-jre ruby ruby-dev

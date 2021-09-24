@@ -55,7 +55,7 @@ variable "iso_url" {
 }
 # Centos 8 Latest Checksum URl 
 # http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CHECKSUMcd 
-source "virtualbox-iso" "riemannc8" {
+source "virtualbox-iso" "riemannb" {
   boot_command            = ["<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks/centos-8-stream.cfg<enter>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>"]
   boot_wait               = "10s"
   disk_size               = 15000
@@ -63,7 +63,6 @@ source "virtualbox-iso" "riemannc8" {
   guest_additions_path    = "VBoxGuestAdditions_{{ .Version }}.iso"
   guest_os_type           = "RedHat_64"
   hard_drive_interface    = "sata"
-  headless                = false
   http_directory          = "."
   http_port_min           = 9001
   http_port_max           = 9100
@@ -76,11 +75,12 @@ source "virtualbox-iso" "riemannc8" {
   ssh_username            = "vagrant"
   vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "2048"], ["modifyvm", "{{ .Name }}", "--cpus", "2"]]
   virtualbox_version_file = ".vbox_version"
-  vm_name                 = "riemannc8"
+  vm_name                 = "riemannb"
+  headless                = "${var.headless_build}"
  
 }
 build {
-  sources = ["source.virtualbox-iso.riemanna","source.virtualbox-iso.riemannmc","source.virtualbox-iso.riemannc8"]
+  sources = ["source.virtualbox-iso.riemanna","source.virtualbox-iso.riemannmc","source.virtualbox-iso.riemannb"]
 
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
@@ -90,8 +90,8 @@ build {
 
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
-    scripts          = ["../scripts/post_install_riemannc8.sh"]
-    only             = ["virtualbox-iso.riemannc8"]
+    scripts          = ["../scripts/post_install_riemannb.sh"]
+    only             = ["virtualbox-iso.riemannb"]
   }
 
   provisioner "shell" {

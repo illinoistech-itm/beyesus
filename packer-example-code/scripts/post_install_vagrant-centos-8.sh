@@ -33,12 +33,12 @@ echo "All Done!"
 #########################
 
 sudo yum install -y kernel-devel-`uname -r` gcc binutils make perl bzip2
-sudo hostnamectl set-hostname riemannc8
+sudo hostnamectl set-hostname riemannb
 cat << EOT >> /etc/hosts
 # Nodes
 192.168.33.100  riemanna riemanna.example.com
 192.168.33.101  riemannb riemannb.example.com
-192.168.33.102  riemannmc riemannc8.example.com
+192.168.33.102  riemannmc riemannmc.example.com
 EOT
 sudo yum update 
 sudo yum install -y java-1.8.0-openjdk

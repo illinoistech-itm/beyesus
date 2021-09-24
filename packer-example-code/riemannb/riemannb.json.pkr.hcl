@@ -41,10 +41,10 @@ source "virtualbox-iso" "riemannc8" {
 build {
   description = "Build base CentOS 8 x86_64"
 
-  sources = ["source.virtualbox-iso.riemannc8"]
+  sources = ["source.virtualbox-iso.riemannb"]
 
   provisioner "shell" {
-    scripts          = ["../scripts/post_riemannc8.sh"]
+    scripts          = ["../scripts/post_riemannb.sh"]
   }
 
   post-processor "vagrant" {

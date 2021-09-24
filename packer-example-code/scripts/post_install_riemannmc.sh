@@ -24,9 +24,9 @@ echo "All Done!"
 sudo apt-get update -y
 sudo cat <<EOT>> /tec/hosts
 # Nodes
-192.168.33.100 riemanna riemanna.example.com
-192.168.33.102 riemannmc riemannmc.example.com
-192.168.33.103 riemannc8 riemannc8.example.com
+192.168.33.100  riemanna riemanna.example.com
+192.168.33.101  riemannb riemannb.example.com
+192.168.33.102  riemannmc riemannmc.example.com
 EOT
 
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann_0.3.6_all.deb
