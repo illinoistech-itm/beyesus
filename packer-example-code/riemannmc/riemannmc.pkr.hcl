@@ -1,7 +1,7 @@
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
-source "virtualbox-iso" "riemannb" {
+source "virtualbox-iso" "riemannmc" {
   boot_command            = ["<enter><enter><f6><esc><wait> ", "autoinstall ds=nocloud-net;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/", "<enter><wait>"]
   boot_wait               = "5s"
   disk_size               = 10000
@@ -22,12 +22,12 @@ source "virtualbox-iso" "riemannb" {
   ssh_username            = "vagrant"
   vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "${var.memory_amount}"]]
   virtualbox_version_file = ".vbox_version"
-  vm_name                 = "riemannb"
+  vm_name                 = "riemannmc"
   headless                = "${var.headless_build}"
 }
 
 build {
-  sources = ["source.virtualbox-iso.riemannb"]
+  sources = ["source.virtualbox-iso.riemannmc"]
 
   provisioner "shell" {
     #inline_shebang  =  "#!/usr/bin/bash -e"

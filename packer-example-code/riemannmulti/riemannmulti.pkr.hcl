@@ -1,7 +1,7 @@
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
-source "virtualbox-iso" "riemannb" {
+source "virtualbox-iso" "riemannmc" {
   boot_command            = ["<enter><enter><f6><esc><wait> ", "autoinstall ds=nocloud-net;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/", "<enter><wait>"]
   boot_wait               = "5s"
   disk_size               = 10000
@@ -22,7 +22,7 @@ source "virtualbox-iso" "riemannb" {
   ssh_username            = "vagrant"
   vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "${var.memory_amount}"]]
   virtualbox_version_file = ".vbox_version"
-  vm_name                 = "riemannb"
+  vm_name                 = "riemannmc"
   headless                = "${var.headless_build}"
 }
  source "virtualbox-iso" "riemanna" {
@@ -80,12 +80,12 @@ source "virtualbox-iso" "riemannc8" {
  
 }
 build {
-  sources = ["source.virtualbox-iso.riemanna","source.virtualbox-iso.riemannb","source.virtualbox-iso.riemannc8"]
+  sources = ["source.virtualbox-iso.riemanna","source.virtualbox-iso.riemannmc","source.virtualbox-iso.riemannc8"]
 
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
     script          = "../scripts/post_install_ubuntu_2004_vagrant.sh"
-    only            = ["virtualbox-iso.riemanna","virtualbox-iso.riemannb"]
+    only            = ["virtualbox-iso.riemanna","virtualbox-iso.riemannmc"]
   }
 
   provisioner "shell" {
@@ -97,7 +97,7 @@ build {
   provisioner "shell" {
     #inline_shebang  =  "#!/usr/bin/bash -e"
     inline          = ["echo 'Resetting SSH port to default!'", "sudo rm /etc/ssh/sshd_config.d/packer-init.conf"]
-    only            = ["virtualbox-iso.riemanna","virtualbox-iso.riemannb"]
+    only            = ["virtualbox-iso.riemanna","virtualbox-iso.riemannmc"]
     }
 
   post-processor "vagrant" {
