@@ -16,7 +16,7 @@ variable "kickstart" {
 
 # Centos 8 Latest Checksum URl 
 # http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CHECKSUMcd 
-source "virtualbox-iso" "centos-8-stream-vanilla" {
+source "virtualbox-iso" "riemannc8" {
   boot_command            = ["<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks/centos-8-stream.cfg<enter>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>"]
   boot_wait               = "10s"
   disk_size               = 15000
@@ -41,10 +41,10 @@ source "virtualbox-iso" "centos-8-stream-vanilla" {
 build {
   description = "Build base CentOS 8 x86_64"
 
-  sources = ["source.virtualbox-iso.centos-8-stream-vanilla"]
+  sources = ["source.virtualbox-iso.riemannc8"]
 
   provisioner "shell" {
-    scripts          = ["../scripts/post_install_vagrant-centos-8.sh"]
+    scripts          = ["../scripts/post_riemannc8.sh"]
   }
 
   post-processor "vagrant" {

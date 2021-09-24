@@ -33,6 +33,7 @@ echo "All Done!"
 #########################
 
 sudo yum install -y kernel-devel-`uname -r` gcc binutils make perl bzip2
+
 sudo hostnamectl set-hostname riemannc8
 cat << EOT >> /etc/hosts
 # Nodes
