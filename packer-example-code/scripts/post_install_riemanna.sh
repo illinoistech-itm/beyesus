@@ -21,7 +21,7 @@ echo "All Done!"
 # Add User customizations below here
 ##################################################
 sudo apt-get update -y
-sudo cat <<EOT>> /tec/hosts
+sudo cat <<EOT>> /etc/hosts
 # Nodes
 192.168.33.100  riemanna riemanna.example.com
 192.168.33.101  riemannb riemannb.example.com
