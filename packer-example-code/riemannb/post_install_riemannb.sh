@@ -14,7 +14,8 @@ sudo yum install -y wget
 #################################################################################################################
 # code needed to allow for vagrant to function seamlessly
 #################################################################################################################
-echo "%admin  ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/init-users
+echo "%admin  ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/init-users 
+
 sudo groupadd admin
 sudo usermod -a -G admin vagrant
 
@@ -32,21 +33,17 @@ echo "All Done!"
 # Add customization here
 #########################
 
-sudo yum install -y kernel-devel-`uname -r` gcc binutils make perl bzip2
+sudo yum install -y kernel-devel-`uname -r` gcc binutils make perl bzip2 vim
+
 
 sudo hostnamectl set-hostname riemannb
-cat << EOT >> /etc/hosts
-# Nodes
-192.168.33.100  riemanna riemanna.example.com
-192.168.33.101  riemannb riemannb.example.com
-192.168.33.102  riemannmc riemannmc.example.com
-EOT
 sudo yum update 
 sudo yum install -y java-1.8.0-openjdk
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann-0.3.6-1.noarch-EL8.rpm
 sudo rpm -Uvh riemann-0.3.6-1.noarch-EL8.rpm
-sudo gem install riemann-client riemann-tools riemann-dash
 sudo yum install ruby ruby-devel
+sudo gem install riemann-client riemann-tools riemann-dash
+
 
 sudo systemctl start riemann
 sudo systemctl enable riemann
