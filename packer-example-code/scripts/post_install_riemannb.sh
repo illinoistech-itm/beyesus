@@ -39,12 +39,12 @@ sudo yum update
 sudo yum install -y java-1.8.0-openjdk
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann-0.3.6-1.noarch-EL8.rpm
 sudo rpm -Uvh riemann-0.3.6-1.noarch-EL8.rpm
-sudo yum install ruby ruby-devel
-sudo gem install riemann-client riemann-tools riemann-dash
+sudo yum install -y ruby ruby-devel gcc libxml2-devel
+sudo gem install --no-ri --no-rdoc riemann-tools
 
 
 sudo systemctl start riemann
 sudo systemctl enable riemann
 sudo systemctl status riemann
-tail /var/log/riemann/riemann.log
+# tail /var/log/riemann/riemann.log
 echo "All Done!"

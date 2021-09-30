@@ -8,7 +8,7 @@ variable "iso_url" {
 # Centos 8 Latest Checksum URl 
 # http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CHECKSUMcd 
 source "virtualbox-iso" "riemannb" {
-  boot_command            = ["<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks/centos-8-stream.cfg<enter>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>"]
+  boot_command            = ["<tab> text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks/centos-8-stream.cfg<enter>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>"]
   boot_wait               = "10s"
   disk_size               = 15000
   guest_additions_mode    = "disable"
@@ -17,7 +17,7 @@ source "virtualbox-iso" "riemannb" {
   hard_drive_interface    = "sata"
   http_directory          = "./"
   http_port_min           = 9001
-  http_port_max           = 9100
+  http_port_max           = 9200
   iso_checksum            = "f3af29ce6ca3c6a4b101b7109e8fe5e88d128cf446054a9467889f1eb302ea48"
   iso_urls                = ["${var.iso_url}"]
   shutdown_command        = "echo 'vagrant' | sudo -S /sbin/poweroff"
@@ -29,8 +29,6 @@ source "virtualbox-iso" "riemannb" {
   vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "2048"], ["modifyvm", "{{ .Name }}", "--cpus", "2"]]
   virtualbox_version_file = ".vbox_version"
   vm_name                 = "riemannb"
-  headless                = "${var.headless_build}"
- 
 }
 source "virtualbox-iso" "riemannmc" {
   boot_command            = ["<enter><enter><f6><esc><wait> ", "autoinstall ds=nocloud-net;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/", "<enter><wait>"]
