@@ -84,13 +84,13 @@ build {
 
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
-    script          = "../scripts/post_install_ubuntu_2004_vagrant.sh"
+    script          = "/Volumes/externalwd/itmo-453/beyesus/packer-example-code/scripts/post_install_ubuntu_2004_vagrant.sh"
     only            = ["virtualbox-iso.riemanna","virtualbox-iso.riemannmc"]
   }
 
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
-    scripts          = ["../scripts/post_install_riemannb.sh"]
+    scripts          = ["/Volumes/externalwd/itmo-453/beyesus/packer-example-code/scripts/post_install_riemannb.sh"]
     only             = ["virtualbox-iso.riemannb"]
   }
 
