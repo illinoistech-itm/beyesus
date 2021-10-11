@@ -6,7 +6,7 @@ variable "iso_url" {
   default = "http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-latest-boot.iso"
 }
 # Centos 8 Latest Checksum URl 
-# http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CHECKSUMcd 
+# http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CHECKSUM
 source "virtualbox-iso" "riemannb" {
   boot_command            = ["<tab> text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks/centos-8-stream.cfg<enter>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>"]
   boot_wait               = "10s"
@@ -18,7 +18,7 @@ source "virtualbox-iso" "riemannb" {
   http_directory          = "./"
   http_port_min           = 9001
   http_port_max           = 9200
-  iso_checksum            = "f3af29ce6ca3c6a4b101b7109e8fe5e88d128cf446054a9467889f1eb302ea48"
+  iso_checksum            = "aeaa2a836fc944f87ff14b617936dfdbce0e89932124b9c7c964bc60309bc61d"
   iso_urls                = ["${var.iso_url}"]
   shutdown_command        = "echo 'vagrant' | sudo -S /sbin/poweroff"
   ssh_password            = "vagrant"
