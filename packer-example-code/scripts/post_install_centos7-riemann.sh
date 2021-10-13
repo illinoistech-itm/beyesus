@@ -34,15 +34,20 @@ echo "All Done!"
 
 sudo yum install -y kernel-devel-`uname -r` gcc binutils make perl bzip2 vim
 
-sudo hostnamectl set-hostname riemannb
+
 sudo yum update 
 sudo yum install -y java-1.8.0-openjdk
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann-0.3.6-1.noarch-EL8.rpm
 sudo rpm -Uvh riemann-0.3.6-1.noarch-EL8.rpm
-sudo yum install -y ruby ruby-devel gcc libxml2-devel
+sudo yum install -y ruby ruby-devel gcc libxml2-devel firewalld
 sudo gem install --no-ri --no-rdoc riemann-tools riemann-dash
 
-
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo firewall-cmd --zone=public --add port=5555/tcp --permanent
+sudo firewall-cmd --zone=public --add port=5556/udp --permanent
+sudo firewall-cmd --zone=public --add port=5557/tcp --permanent
+sudo firewall-cmd --reload
 sudo systemctl enable riemann
 sudo systemctl start riemann
 sudo systemctl status riemann

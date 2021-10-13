@@ -37,12 +37,18 @@ sudo apt-get update -y
 sudo apt-get install -y openjdk-8-jre ruby ruby-dev
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann_0.3.6_all.deb
 sudo dpkg -i riemann_0.3.6_all.deb
-sudo gem install riemann-client riemann-tools riemann-dash
+sudo gem install riemann-client riemann-tools riemann-dash firewalld
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo firewall-cmd --zone=public --add port=5555/tcp --permanent
+sudo firewall-cmd --zone=public --add port=5556/udp --permanent
+sudo firewall-cmd --zone=public --add port=5557/tcp --permanent
+sudo firewall-cmd --reload
+
 sudo systemctl enable riemann
 sudo systemctl start riemann
 # add a repo to add configuration
 git clone ssh://git@github.com/illinoistech-itm/beyesus.git
-cp beyesus/itmo-553/
 sudo systemctl stop riemann
 sudo systemctl start riemann
 
