@@ -1,3 +1,4 @@
+#packer 
 *.vdi
 *.box
 .vagrant/
@@ -9,3 +10,35 @@ packer-cache/
 output*/
 vagrant.d/
 *.iso
+variables.pkr.hcl
+
+variables.json
+.DS_Store
+id_rsa
+id_rsa*
+id_rsa.pub
+.Vagrantfile*
+Vagrantfile~
+config.default.yml
+
+clone-pwrshell.ps1
+pull-repo.ps1
+roster.txt
+clone-bash.sh
+pull-repo.sh
+
+# Artifacts for Published Documents
+*.pdf
+*.docx
+*.txt
+*~
+chapter-*.html
+*.html
+
+# For Spark
+._SUCCESS*
+.part*
+*.crc
+
+# Docker
+.env
