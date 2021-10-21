@@ -14,7 +14,7 @@ vagrant.d/
 variables.pkr.hcl
 *.vmdk
 *.vbox-prev
-
+*.pdf
 variables.json
 .DS_Store
 id_rsa
@@ -29,7 +29,7 @@ pull-repo.ps1
 roster.txt
 clone-bash.sh
 pull-repo.sh
-
+*.ps1
 # Artifacts for Published Documents
 *.pdf
 *.docx
@@ -45,3 +45,4 @@ chapter-*.html
 
 # Docker
 .env
+.gitignore
