@@ -1213,3 +1213,11 @@
 02:57:38.686887 NAT: DNS#0: 75.75.75.75
 02:57:38.686892 NAT: DNS#1: 75.75.76.76
 02:57:38.687004 Console: Machine state changed to 'Running'
+06:31:59.655809 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 5 seconds ago
+06:32:00.394666 VMMDev: GuestHeartBeat: Guest is alive (gone 6 068 680 833 ns)
+06:32:19.238956 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 11 seconds ago
+06:32:19.353195 VMMDev: GuestHeartBeat: Guest is alive (gone 11 732 100 895 ns)
+06:34:24.708175 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 6 seconds ago
+06:34:24.721958 VMMDev: GuestHeartBeat: Guest is alive (gone 6 354 826 327 ns)
+06:51:04.735565 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 5 seconds ago
+06:51:04.848145 VMMDev: GuestHeartBeat: Guest is alive (gone 5 180 363 323 ns)
