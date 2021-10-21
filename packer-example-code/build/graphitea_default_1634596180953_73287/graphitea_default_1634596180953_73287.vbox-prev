@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.16-macosx">
-  <Machine uuid="{cbc29adf-14b6-4aef-b69a-1e0b72d214bc}" name="graphitea_default_1634596180953_73287" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2021-10-20T23:35:56Z">
+  <Machine uuid="{cbc29adf-14b6-4aef-b69a-1e0b72d214bc}" name="graphitea_default_1634596180953_73287" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2021-10-21T21:44:50Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{233e144d-8c48-4202-af14-c4e6adaf19ec}" location="ubuntu-graphitea-disk001.vmdk" format="VMDK" type="Normal"/>
@@ -47,7 +47,7 @@
         <Adapter slot="0" enabled="true" MACAddress="0800276EFE46" type="82540EM">
           <NAT>
             <DNS use-proxy="true"/>
-            <Forwarding name="ssh" proto="1" hostip="127.0.0.1" hostport="2200" guestport="22"/>
+            <Forwarding name="ssh" proto="1" hostip="127.0.0.1" hostport="2222" guestport="22"/>
           </NAT>
         </Adapter>
         <Adapter slot="1" enabled="true" MACAddress="080027FA9BB1" type="82540EM">
