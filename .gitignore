@@ -1,6 +1,7 @@
 #packer 
 *.vdi
 *.box
+*.vbox
 .vagrant/
 *console.log
 packer-cache/
@@ -11,6 +12,8 @@ output*/
 vagrant.d/
 *.iso
 variables.pkr.hcl
+*.vmdk
+*.vbox-prev
 
 variables.json
 .DS_Store
