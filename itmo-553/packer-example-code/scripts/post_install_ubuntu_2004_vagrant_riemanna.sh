@@ -43,9 +43,11 @@ wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann_0.3.6_al
 sudo dpkg -i riemann_0.3.6_all.deb
 # 3 we will need some ruby gems 
 sudo gem install riemann-client riemann-tools riemann-dash 
+sudo systemctl enable riemann
+sudo systemctl start riemann
 # 4 We need to ensure the services are enabled and start succesfully
 git clone git@github.com:illinoistech-itm/beyesus.git
 cp -v beyesus/itmo-553/week-07/riemann/riemanna/riemann.config /etc/riemann/riemann.conf
-sudo systemctl enable riemann
+sudo systemctl stop riemann
 sudo systemctl start riemann
 
