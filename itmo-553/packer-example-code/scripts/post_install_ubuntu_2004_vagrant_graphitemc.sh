@@ -32,6 +32,7 @@ cat << EOT >> /etc/hosts
 EOT
 
 sudo apt-get update
+git clone git@github.com:illinoistech-itm/beyesus.git
 sudo apt-get install -y python3-dev python3-pip python3-setuptools
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y \
 --allow-change-held-packages install graphite-carbon python3-whisper
@@ -44,3 +45,4 @@ sudo dpkg -i ./grafana_7.3.6_amd64.deb
 sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable grafana-server
 sudo /bin/systemctl start grafana-server
+#sudo python3 -m pip install carbon --install-option="--prefix=/etc/carbon" --install-option="--instal-lib=/var/lib/graphite"

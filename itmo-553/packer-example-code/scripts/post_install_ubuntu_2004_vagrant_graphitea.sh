@@ -33,14 +33,12 @@ EOT
 
 sudo apt-get update
 sudo apt-get install -y python3-dev python3-pip python3-setuptools
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y \
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y \ 
 --allow-change-held-packages install graphite-carbon python3-whisper
 sudo apt-get install -y apt-transport-https 
-sudo apt-get install -y graphite-carbon python3-whisper
-sudo apt-get install graphite-api gunicorn
-sudo apt-get install -y adduser libfontconfig1
+sudo apt-get install -y graphite-carbon python3-whisper graphite-api gunicorn adduser libfontconfig1
 wget https://dl.grafana.com/oss/release/grafana_7.3.6_amd64.deb
-sudo git clone https://github.com/illinoistech-itm/beyesus
+git clone git@github.com:illinoistech-itm/beyesus.git
 cd beyesus/itmo-553/week-08/centos-service-files
 sudo cp carbon-cache@.service /lib/systemd/system
 sudo cp carbon-relay@.service /lib/systemd/system

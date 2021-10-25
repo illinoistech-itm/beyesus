@@ -46,11 +46,8 @@ sudo gem install riemann-client riemann-tools riemann-dash
 # 4 We need to ensure the services are enabled and start succesfully
 sudo systemctl enable riemann
 sudo systemctl start riemann
-
-git clone git@github.com:illinoistech-itm/sample-student.git
+git clone git@github.com:illinoistech-itm/beyesus.git
 cp -v beyesus/itmo-553/week-07/riemann/riemannmc/riemann.config /etc/riemann/riemann.conf
-cp -v beyesus/itmo-553/week-07/riemann/riemannmc/riemann.config /etc/riemann/riemann.conf
-
 sudo systemctl stop riemann
 sudo systemctl start riemann
 
