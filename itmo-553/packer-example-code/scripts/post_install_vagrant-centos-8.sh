@@ -36,10 +36,17 @@ sudo yum install -y kernel-devel-`uname -r` gcc binutils make perl bzip2 vim git
 sudo yum install -y epel-release
 sudo yum install -y python3-pip python3-setuptools python3-devel gcc libffi-devel cairo-devel libtool
 sudo yum install -y python3-six  python3-urllib3
+#sudo yum install -y graphite-carbon python3-whisper
+#sudo yum install graphite-api gunicorn
+#sudo yum install -y adduser libfontconfig1
 sudo python3 -m pip install carbon
 sudo yum install -y urw-fonts
 wget https://dl.grafana.com/oss/release/grafana-7.3.6-1.x86_64.rpm
 sudo rpm -iv ./grafana-7.3.6-1.x86_64.rpm
+sudo git clone https://github.com/illinoistech-itm/beyesus
+sudo cp beyesus/itmo-553/week-08/centos-service-files/carbon-cache@.service /lib/systemd/system
+sudo cp beyesus/itmo-553/week-08/centos-service-files/carbon-relay@.service /lib/systemd/system
+sudo cp -v beyesus/itmo-553/week-07/riemann/riemannb/riemann.config /etc/riemann/riemann.conf
 sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable grafana-server.service
 echo "All Done!"
