@@ -193,9 +193,13 @@ provisioner "file" {
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
     scripts          = ["../scripts/post_install_vagrant-centos-8.sh"]
-    only             = ["virtualbox-iso.centos-graphiteb","virtualbox-iso.centos-riemannb"]
+    only             = ["virtualbox-iso.centos-graphiteb"]
   }
-
+provisioner "shell" {
+    execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
+    scripts          = ["../scripts/post_install_vagrant-centos-8-riemannb.sh"]
+    only             = ["virtualbox-iso.centos-riemannb"]
+  }
   provisioner "shell" {
     #inline_shebang  =  "#!/usr/bin/bash -e"
     inline          = ["echo 'Resetting SSH port to default!'", "sudo rm /etc/ssh/sshd_config.d/packer-init.conf"]
