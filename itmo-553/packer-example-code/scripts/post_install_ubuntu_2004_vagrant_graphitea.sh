@@ -32,7 +32,7 @@ cat << EOT >> /etc/hosts
 EOT
 
 ## Command to change hostname
-sudo hostnamectl set-hostname graphitemc
+sudo hostnamectl set-hostname graphitea
 
 # Commands to install graphite, carbon-cache and carbon-relay services,
 # and whisper flatfile database

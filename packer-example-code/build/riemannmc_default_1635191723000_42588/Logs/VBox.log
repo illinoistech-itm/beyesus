@@ -1149,3 +1149,11 @@
 00:00:33.892517 NAT: DHCP offered IP address 10.0.2.15
 00:00:34.467583 VMMDev: Guest Log: vboxsf: g_fHostFeatures=0x8000000f g_fSfFeatures=0x1 g_uSfLastFunction=29
 00:00:34.467672 VMMDev: Guest Log: vboxsf: Successfully loaded version 6.1.22_Ubuntu r144080 on 5.4.0-89-generic SMP mod_unload modversions  (LINUX_VERSION_CODE=0x5048f)
+00:59:25.320271 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 5 seconds ago
+00:59:25.366009 VMMDev: GuestHeartBeat: Guest is alive (gone 5 352 562 000 ns)
+01:00:07.951344 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 11 seconds ago
+01:00:08.057890 VMMDev: GuestHeartBeat: Guest is alive (gone 11 556 470 869 ns)
+01:00:15.531306 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 5 seconds ago
+01:00:15.976227 VMMDev: GuestHeartBeat: Guest is alive (gone 6 293 190 096 ns)
+01:00:45.485239 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 6 seconds ago
+01:00:45.507297 VMMDev: GuestHeartBeat: Guest is alive (gone 6 864 191 277 ns)

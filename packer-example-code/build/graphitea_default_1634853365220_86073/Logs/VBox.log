@@ -1152,3 +1152,14 @@
 00:01:08.239834 NAT: DHCP released IP address 10.0.2.15
 00:01:08.335224 NAT: DHCP offered IP address 10.0.2.15
 00:01:08.336304 NAT: DHCP offered IP address 10.0.2.15
+01:46:31.669748 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 15 seconds ago
+01:46:31.689274 VMMDev: GuestHeartBeat: Guest is alive (gone 15 211 823 422 ns)
+01:46:45.956198 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 5 seconds ago
+01:46:45.981627 VMMDev: GuestHeartBeat: Guest is alive (gone 5 138 278 813 ns)
+01:47:19.440751 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 7 seconds ago
+01:47:19.547262 VMMDev: GuestHeartBeat: Guest is alive (gone 7 986 681 824 ns)
+01:47:27.020709 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 6 seconds ago
+01:47:27.067755 VMMDev: GuestHeartBeat: Guest is alive (gone 6 334 753 985 ns)
+01:47:56.974906 VMMDev: vmmDevHeartbeatFlatlinedTimer: Guest seems to be unresponsive. Last heartbeat received 6 seconds ago
+01:47:56.993391 VMMDev: GuestHeartBeat: Guest is alive (gone 6 888 270 083 ns)
+01:48:01.116038 TM: Giving up catch-up attempt at a 60 049 951 215 ns lag; new total: 60 049 951 215 ns
