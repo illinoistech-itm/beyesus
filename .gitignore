@@ -25,7 +25,7 @@ Vagrantfile~
 config.default.yml
 varaiables.pkr.hcl
 clone-pwrshell.ps1
-pull-repo.ps1
+pull-repo.ps1 
 roster.txt
 clone-bash.sh
 pull-repo.sh
