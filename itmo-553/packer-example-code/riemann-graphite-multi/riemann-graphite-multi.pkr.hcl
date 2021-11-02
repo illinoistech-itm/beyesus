@@ -96,6 +96,7 @@ source "virtualbox-iso" "ubuntu-graphitea" {
   vm_name                 = "ubuntu-graphitea"
   headless                = "${var.headless_build}"
 }
+
 # Centos 8 Latest Checksum URl 
 # http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CHECKSUM
 source "virtualbox-iso" "centos-riemannb" {
@@ -118,7 +119,7 @@ source "virtualbox-iso" "centos-riemannb" {
   vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "${var.memory_amount}"]]
   virtualbox_version_file = ".vbox_version"
   headless                = "${var.headless_build}"
-
+}
 source "virtualbox-iso" "ubuntu-graphitemc" {
   boot_command            = ["<enter><enter><f6><esc><wait> ", "autoinstall ds=nocloud-net;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/", "<enter><wait>"]
   boot_wait               = "5s"
