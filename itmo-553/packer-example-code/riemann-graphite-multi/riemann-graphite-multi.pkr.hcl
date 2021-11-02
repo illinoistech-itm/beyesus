@@ -96,10 +96,9 @@ source "virtualbox-iso" "ubuntu-graphitea" {
   vm_name                 = "ubuntu-graphitea"
   headless                = "${var.headless_build}"
 }
-
 # Centos 8 Latest Checksum URl 
 # http://bay.uchicago.edu/centos/8-stream/isos/x86_64/CHECKSUM
-source "virtualbox-iso" "centos-graphiteb" {
+source "virtualbox-iso" "centos-riemannb" {
   boot_command            = ["<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks/centos-8-stream.cfg<enter>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>", "<wait10><wait10><wait10>"]
   boot_wait               = "10s"
   disk_size               = 15000
@@ -116,11 +115,9 @@ source "virtualbox-iso" "centos-graphiteb" {
   ssh_port                = 22
   ssh_timeout             = "30m"
   ssh_username            = "vagrant"
-  vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "2048"], ["modifyvm", "{{ .Name }}", "--cpus", "2"]]
+  vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "${var.memory_amount}"]]
   virtualbox_version_file = ".vbox_version"
   headless                = "${var.headless_build}"
-}
-
 
 source "virtualbox-iso" "ubuntu-graphitemc" {
   boot_command            = ["<enter><enter><f6><esc><wait> ", "autoinstall ds=nocloud-net;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/", "<enter><wait>"]
