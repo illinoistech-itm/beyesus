@@ -105,7 +105,7 @@ sudo cp -v ./beyesus/itmo-553/week-09/graphite/graphiteb/storage-schemas.conf /e
 sudo touch /etc/carbon/storage-aggregation.conf
 
 ## Ubuntu only - default file to start 2 carbon cache and 1 carbon-relay instances at boot time
-sudo cp -v ./beyesus/itmo-553/week-09/graphite/graphiteb/graphite-carbon.default /etc/default/graphite-carbon
+sudo cp -v ./beyesus/itmo-553/week-09/graphite/graphiteb/carbon.conf /etc/default/graphite-carbon
 
 ## Command to create the graphite-api search index file
 sudo touch /var/lib/graphite/api_search_index
