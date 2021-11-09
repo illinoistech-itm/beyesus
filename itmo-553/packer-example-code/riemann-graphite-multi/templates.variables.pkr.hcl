@@ -21,7 +21,7 @@ variable "rsa_key_location" {
 }
 variable "build_artifact_location" {
   type = string
-  default = " ../build/"
+  # default = " ../build/"
   # This is the default path on the build-server to place the .box files for downlowds via a browser
-  # default ="/datadisk2/boxes/bey-"
+   default ="/datadisk2/boxes/bey-"
 }
