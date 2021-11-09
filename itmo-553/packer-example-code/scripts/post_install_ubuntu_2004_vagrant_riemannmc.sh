@@ -48,7 +48,7 @@ sudo gem install riemann-client riemann-tools riemann-dash
 sudo systemctl enable riemann
 sudo systemctl start riemann
 git clone git@github.com:illinoistech-itm/beyesus.git
-cp -v beyesus/itmo-553/week-11/riemann/riemannmc/riemann.config /etc/riemann/riemann.conf
+cp -v beyesus/itmo-553/week-11/riemann/riemannmc/riemann.config /etc/riemann/riemann.config
 sudo systemctl stop riemann
 sudo systemctl start riemann
 

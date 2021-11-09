@@ -49,7 +49,7 @@ sudo yum install -y urw-fonts
 wget https://dl.grafana.com/oss/release/grafana-7.3.6-1.x86_64.rpm
 sudo rpm -iv ./grafana-7.3.6-1.x86_64.rpm
 git clone git@github.com:illinoistech-itm/beyesus.git
-cp -v sample-student/itmo-453/week-11/riemann/riemannb/riemann.config /etc/riemann/riemann.conf
+cp -v sample-student/itmo-453/week-11/riemann/riemannb/riemann.config /etc/riemann/riemann.config
 sudo systemctl enable riemann
 sudo systemctl start riemann
 echo "All Done!"

@@ -48,7 +48,7 @@ sudo systemctl enable riemann
 sudo systemctl start riemann
 # 4 We need to ensure the services are enabled and start succesfully
 git clone git@github.com:illinoistech-itm/beyesus.git
-cp -v beyesus/itmo-553/week-11/riemann/riemanna/riemann.config /etc/riemann/riemann.conf
+cp -v beyesus/itmo-553/week-11/riemann/riemanna/riemann.config /etc/riemann/riemann.config
 sudo systemctl stop riemann
 sudo systemctl start riemann
 
