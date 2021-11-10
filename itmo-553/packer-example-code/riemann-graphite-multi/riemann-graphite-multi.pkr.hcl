@@ -112,7 +112,7 @@ source "virtualbox-iso" "ubuntu-graphiteb" {
   ssh_wait_timeout        = "1800s"
   ssh_password            = "vagrant"
   ssh_port                = 2222
-  ssh_timeout             = "20m"
+  ssh_timeout             = "50m"
   ssh_username            = "vagrant"
   vboxmanage              = [["modifyvm", "{{ .Name }}", "--memory", "${var.memory_amount}"]]
   virtualbox_version_file = ".vbox_version"
