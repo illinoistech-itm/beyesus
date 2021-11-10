@@ -201,7 +201,7 @@ provisioner "shell" {
   provisioner "shell" {
     #inline_shebang  =  "#!/usr/bin/bash -e"
     inline          = ["echo 'Resetting SSH port to default!'", "sudo rm /etc/ssh/sshd_config.d/packer-init.conf"]
-    only            = ["virtualbox-iso.ubuntu-graphitea","virtualbox-iso.ubuntu-graphitemc","virtualbox-iso.ubuntu-riemanna","virtualbox-iso.ubuntu-riemannmc"]
+    only            = ["virtualbox-iso.ubuntu-graphitea","virtualbox-iso.ubuntu-graphiteb","virtualbox-iso.ubuntu-graphitemc","virtualbox-iso.ubuntu-riemanna","virtualbox-iso.ubuntu-riemannmc"]
     }
 
   post-processor "vagrant" {
