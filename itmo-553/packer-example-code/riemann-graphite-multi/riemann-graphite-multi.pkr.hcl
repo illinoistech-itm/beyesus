@@ -228,7 +228,7 @@ provisioner "file" {
  
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'"
-    inline          = ["mkdir -p /home/vagrant/.ssh", "mkdir -p /root/.ssh", "chmod 600 /home/vagrant/id_rsa_itmo-453-github-deploy", "cp -v /home/vagrant/id_rsa_itmo-453-github-deploy /home/vagrant/.ssh/", "cp -v /home/vagrant/config /home/vagrant/.ssh/", "cp -v /home/vagrant/config /root/.ssh/"]
+    inline          = ["mkdir -p /home/vagrant/.ssh", "mkdir -p /root/.ssh", "chmod 600 /home/vagrant/id_rsa_itmo-553-github-deploy", "cp -v /home/vagrant/id_rsa_itmo-553-github-deploy /home/vagrant/.ssh/", "cp -v /home/vagrant/config /home/vagrant/.ssh/", "cp -v /home/vagrant/config /root/.ssh/"]
   }
 
 
