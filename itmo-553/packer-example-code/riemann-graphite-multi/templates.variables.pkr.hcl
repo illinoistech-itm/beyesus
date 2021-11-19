@@ -15,7 +15,7 @@ variable "rsa_key_location" {
   # On Windows use this syntax, assuming your user is named: palad
   # default = "C:\Users\palad\.ssh\id_rsa_itmo-453-github-deploy"
   # On Linux use this syntax, assuming your user is named: controller
-  default = "/home/beyesus/.ssh/id_rsa_itmo-553-github-deploy"
+  default = "/datadisk1/home/beyesus/.ssh/id_rsa_itmo-553-github-deploy"
   #default = "/Users/birukeyesus/.ssh/id_rsa_itmo-553-github-deploy"
 
 }
@@ -23,5 +23,5 @@ variable "build_artifact_location" {
   type = string
   # default = " ../build/"
   # This is the default path on the build-server to place the .box files for downlowds via a browser
-   default ="/datadisk2/boxes/bey-"
+   default ="/datadisk1/boxes/bey-"
 }
