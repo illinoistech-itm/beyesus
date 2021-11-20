@@ -23,5 +23,5 @@ variable "build_artifact_location" {
   type = string
    # default = " ../build/"
   # This is the default path on the build-server to place the .box files for downlowds via a browser
-  default ="/datadisk2/boxes/bey-"
+  default ="/datadisk1/boxes/bey-"
 }
