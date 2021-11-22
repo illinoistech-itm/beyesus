@@ -54,7 +54,7 @@ sudo hostnamectl set-hostname host1
 # Install software
 # 1 we will need openjdk-8-jre (java runtime) and ruby runtimes
 
-git clone git@github.com:illinoistech-itm/sample-student.git
+git clone git@github.com:illinoistech-itm/beyesus.git
 
 ##################################################
 # Installation and cofiguration of collectd
