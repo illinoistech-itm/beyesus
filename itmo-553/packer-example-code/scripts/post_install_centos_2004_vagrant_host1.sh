@@ -69,9 +69,9 @@ sudo systemctl stop collectd
 # Copy the collectd configuration files from week-12
 #####################################################
 sudo mkdir -p /etc/collectd.conf.d/
-cp -v sample-student/itmo-453/week-13/hosts/collectd.conf.d/* /etc/collectd.conf.d/
+cp -v beyesus/itmo-553/week-13/hosts/collectd.conf.d/* /etc/collectd.conf.d/
 
-cp -v sample-student/itmo-453/week-13/collectd.conf /etc/
+cp -v beyesus/itmo-553/week-13/collectd.conf /etc/
 
 sudo systemctl daemon-reload
 sudo systemctl start collectd
