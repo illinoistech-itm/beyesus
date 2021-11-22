@@ -50,8 +50,6 @@ sudo systemctl stop carbon-relay@1.service
 ## Command to install gunicorn, which is an applicaiton server which will servce 
 # our graphite api on port 8542 - https://gunicorn.org/
 sudo apt-get install -y gunicorn
-sudo yum install -y epel-release
-sudo yum install -y collectd collectd-write_riemann
 
 # Dependencies needed to install graphite-api 
 # Since we are using the .deb package for graphite-api and not installing via apt-get
