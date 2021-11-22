@@ -43,12 +43,37 @@ sudo apt-get install -y openjdk-8-jre ruby ruby-dev
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann_0.3.6_all.deb
 sudo dpkg -i riemann_0.3.6_all.deb
 # 3 we will need some ruby gems 
-sudo gem install riemann-client riemann-tools riemann-dash 
+sudo gem install riemann-client riemann-tools
 sudo systemctl enable riemann
 sudo systemctl start riemann
 # 4 We need to ensure the services are enabled and start succesfully
 git clone git@github.com:illinoistech-itm/beyesus.git
-cp -v beyesus/itmo-553/week-11/riemann/riemanna/riemann.config /etc/riemann/riemann.config
+cp -v sample-student/itmo-453/week-07/riemann/riemanna/riemann.config /etc/riemann/riemann.config
+
+#####################################################
+# Use sed to replace the default graphitea values in /etc/riemann/examplecom/etc/graphite.clj
+#####################################################
+# No need as this is the graphitea system
+
+#####################################################
+# Restart the Riemann service after the changes
+#####################################################
+
 sudo systemctl stop riemann
 sudo systemctl start riemann
+
+##################################################
+# Installation and cofiguration of collectd
+##################################################
+sudo apt-get update -y
+sudo apt-get install -y collectd 
+
+#####################################################
+# Copy the collectd configuration files from week-12
+#####################################################
+cp -v sample-student/itmo-453/week-12/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
+
+cp -v sample-student/itmo-453/week-12/collectd.conf /etc/collectd/
+
+
 

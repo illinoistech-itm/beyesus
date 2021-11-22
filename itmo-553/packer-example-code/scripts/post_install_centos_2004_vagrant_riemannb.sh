@@ -59,15 +59,53 @@ sudo yum install -y java-1.8.0-openjdk ruby ruby-devel
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann-0.3.6-1.noarch-EL8.rpm
 sudo rpm -i riemann-0.3.6-1.noarch-EL8.rpm
 # 3 we will need some ruby gems 
-sudo gem install riemann-client riemann-tools riemann-dash 
+sudo gem install riemann-client riemann-tools
 # 4 We need to ensure the services are enabled and start succesfully
 sudo systemctl enable riemann
 sudo systemctl start riemann
 
 git clone git@github.com:illinoistech-itm/beyesus.git
-cp -v beyesus/itmo-553/week-07/riemann/riemannb/riemann.config /etc/riemann/riemann.conf
+cp -v beyesus/itmo-553/week-07/riemann/riemannb/riemann.config /etc/riemann/riemann.config
+
+####################################################
+# Make directory for *.clj files
+####################################################
+sudo mkdir -p /etc/riemann/examplecom/etc
+cp -v beyesus/itmo-553/week-09/examplecom/etc/*.clj /etc/riemann/examplecom/etc/
+
+#####################################################
+# Use sed to replace the default graphitea values in /etc/riemann/examplecom/etc/graphite.clj
+#####################################################
+sed -i 's/graphitea/graphiteb/g' /etc/riemann/examplecom/etc/graphite.clj
+sed -i 's/productiona/productionb/g' /etc/riemann/examplecom/etc/graphite.clj
+
+#####################################################
+# Restart the Riemann service after the changes
+#####################################################
 
 sudo systemctl stop riemann
 sudo systemctl start riemann
 
+##################################################
+# Installation and cofiguration of collectd
+##################################################
+sudo yum install -y collectd collectd-write_riemann
+
+sudo systemctl stop collectd
+
+#####################################################
+# Copy the collectd configuration files from week-12
+#####################################################
+sudo mkdir -p /etc/collectd.conf.d/
+cp -v beyesus/itmo-553/week-12/riemann/collectd.conf.d/* /etc/collectd.conf.d/
+
+cp -v beyesus/itmo-553/week-12/collectd.conf /etc/
+
+sudo systemctl daemon-reload
+sudo systemctl start collectd
+
+#######################################################
+# Using sed to find and replace riemanna in the write_riemann.conf collectd conf file
+#######################################################
+sed -i 's/"riemanna"/"riemannb"/' /etc/collectd.conf.d/write_riemann.conf
 

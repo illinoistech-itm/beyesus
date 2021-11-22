@@ -54,11 +54,13 @@ sudo hostnamectl set-hostname host1
 # Install software
 # 1 we will need openjdk-8-jre (java runtime) and ruby runtimes
 
-git clone git@github.com:illinoistech-itm/beyesus.git
+git clone git@github.com:illinoistech-itm/sample-student.git
 
 ##################################################
 # Installation and cofiguration of collectd
 ##################################################
+sudo yum install -y epel-release
+
 sudo yum install -y collectd stress collectd-write_riemann
 
 sudo systemctl stop collectd
@@ -67,9 +69,9 @@ sudo systemctl stop collectd
 # Copy the collectd configuration files from week-12
 #####################################################
 sudo mkdir -p /etc/collectd.conf.d/
-cp -v beyesus/itmo-553/week-13/hosts/collectd.conf.d/* /etc/collectd.conf.d/
+cp -v sample-student/itmo-453/week-13/hosts/collectd.conf.d/* /etc/collectd.conf.d/
 
-cp -v beyesus/itmo-553/week-13/collectd.conf /etc/
+cp -v sample-student/itmo-453/week-13/collectd.conf /etc/
 
 sudo systemctl daemon-reload
 sudo systemctl start collectd
