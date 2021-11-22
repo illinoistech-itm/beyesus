@@ -84,6 +84,9 @@ sudo systemctl stop collectd
 cp -v sample-student/itmo-453/week-12/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
 
 cp -v sample-student/itmo-453/week-12/collectd.conf /etc/collectd/
+echo "postfix postfix/main_mailer_type string 'Internet Site'" | sudo debconf-set-selections
+echo "postfix postfix/mailname string riemannmc.example.com" | sudo debconf-set-selections
+sudo apt-get install -y mailutils
 
 sudo systemctl daemon-reload
 sudo systemctl start collectd
