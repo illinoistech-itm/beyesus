@@ -48,7 +48,7 @@ sudo systemctl enable riemann
 sudo systemctl start riemann
 # 4 We need to ensure the services are enabled and start succesfully
 git clone git@github.com:illinoistech-itm/beyesus.git
-cp -v sample-student/itmo-453/week-07/riemann/riemanna/riemann.config /etc/riemann/riemann.config
+cp -v beyesus/itmo-553/week-07/riemann/riemanna/riemann.config /etc/riemann/riemann.config
 
 #####################################################
 # Use sed to replace the default graphitea values in /etc/riemann/examplecom/etc/graphite.clj
@@ -71,9 +71,9 @@ sudo apt-get install -y collectd
 #####################################################
 # Copy the collectd configuration files from week-12
 #####################################################
-cp -v sample-student/itmo-453/week-12/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
+cp -v beyesus/itmo-553/week-12/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
 
-cp -v sample-student/itmo-453/week-12/collectd.conf /etc/collectd/
+cp -v beyesus/itmo-553/week-12/collectd.conf /etc/collectd/
 
 
 
