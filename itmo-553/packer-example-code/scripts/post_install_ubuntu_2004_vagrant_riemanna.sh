@@ -83,9 +83,10 @@ sudo apt-get install -y collectd
 #####################################################
 # Copy the collectd configuration files from week-12
 #####################################################
-cp -v beyesus/itmo-553/week-12/collectd/riemann/collectd.conf.d/* /etc/collectd.conf.d/
+sudo mkdir -p /etc/collectd.conf.d/
+cp -v beyesus/itmo-553/week-12/collectd/collectd.conf /etc/
 
-cp -v beyesus/itmo-553/week-12/collectd/collectd.conf /etc/collectd/
+cp -v beyesus/itmo-553/week-12/collectd/riemann/collectd.conf.d/* /etc/collectd.conf.d/
 
 
 
