@@ -44,6 +44,7 @@ wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann_0.3.6_al
 sudo dpkg -i riemann_0.3.6_all.deb
 # 3 we will need some ruby gems 
 sudo gem install riemann-client riemann-tools
+# 4 We need to ensure the services are enabled and start succesfully
 sudo systemctl enable riemann
 sudo systemctl start riemann
 # firewalld install

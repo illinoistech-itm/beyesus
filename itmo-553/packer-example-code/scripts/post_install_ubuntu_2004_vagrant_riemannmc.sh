@@ -38,6 +38,7 @@ sudo hostnamectl set-hostname riemannmc
 # 1 we will need openjdk-8-jre (java runtime) and ruby runtimes
 # Examples:
 sudo apt-get update -y
+sudo apt-get install -y openjdk-8-jre ruby ruby-dev
 
 # 2 we will need the rpm deb packages from riemann.io
 # Examples
