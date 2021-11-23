@@ -93,9 +93,9 @@ sudo systemctl stop collectd
 #####################################################
 # Copy the collectd configuration files from week-12
 #####################################################
-cp -v beyesus/itmo-553/week-12/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
+cp -v beyesus/itmo-553/week-12/riemann/collectd/collectd.conf.d/* /etc/collectd/collectd.conf.d/
 
-cp -v beyesus/itmo-553/week-12/collectd.conf /etc/collectd/
+cp -v beyesus/itmo-553/week-12/collectd/collectd.conf /etc/collectd/
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | sudo debconf-set-selections
 echo "postfix postfix/mailname string riemannmc.example.com" | sudo debconf-set-selections
 sudo apt-get install -y mailutils

@@ -111,7 +111,7 @@ sudo systemctl stop collectd
 sudo mkdir -p /etc/collectd.conf.d/
 cp -v /beyesus/itmo-553/week-12/collectd/riemann/collectd.conf.d/* /etc/collectd.conf.d/
 
-cp -v beyesus/itmo-553/week-12/collectd.conf /etc/
+cp -v beyesus/itmo-553/week-12/collectd/collectd.conf /etc/
 
 sudo systemctl daemon-reload
 sudo systemctl start collectd
