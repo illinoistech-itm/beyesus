@@ -50,7 +50,7 @@ sudo gem install riemann-client riemann-tools
 sudo systemctl enable riemann
 sudo systemctl start riemann
 # firewalld install
-sudo yum install -y firewalld
+sudo apt-get install -y firewalld
 sudo systemctl enable firewalld
 sudo systemctl start firewalld
 sudo systemctl status firewalld
