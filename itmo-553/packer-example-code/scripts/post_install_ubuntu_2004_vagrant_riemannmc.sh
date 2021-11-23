@@ -38,7 +38,6 @@ sudo hostnamectl set-hostname riemannmc
 # 1 we will need openjdk-8-jre (java runtime) and ruby runtimes
 # Examples:
 sudo apt-get update -y
-sudo apt-get install -y openjdk-8-jre ruby ruby-dev
 
 # 2 we will need the rpm deb packages from riemann.io
 # Examples
@@ -49,7 +48,18 @@ sudo gem install riemann-client riemann-tools
 # 4 We need to ensure the services are enabled and start succesfully
 sudo systemctl enable riemann
 sudo systemctl start riemann
-
+# firewalld install
+sudo yum install -y firewalld
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo systemctl status firewalld
+sudo firewall-cmd --list-all 
+sudo firewall-cmd --zone=public --add-port=5555/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=5556/udp --permanent
+sudo firewall-cmd --zone=public --add-port=5557/tcp --permanent
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all 
+#clone in to beyesus
 git clone git@github.com:illinoistech-itm/beyesus.git
 cp -v beyesus/itmo-553/week-07/riemann/riemannmc/riemann.config /etc/riemann/riemann.config
 
