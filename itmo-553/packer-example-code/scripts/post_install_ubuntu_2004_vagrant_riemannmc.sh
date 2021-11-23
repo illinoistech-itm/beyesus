@@ -88,8 +88,9 @@ sudo systemctl start riemann
 ##################################################
 sudo apt-get update -y
 # Command needed to pre-seed the answer to the mailutils configuration question
-echo "postfix postfix/main_mailer_type string 'No Configuration'" | sudo debconf-set-selections
-sudo apt-get install -y collectd mailutils
+echo "postfix postfix/main_mailer_type string 'Internet Site'" | sudo debconf-set-selections
+echo "postfix postfix/mailname string riemannmc.example.com" | sudo debconf-set-selections
+sudo apt-get install -y mailutils
 sudo systemctl stop collectd
 
 #####################################################
