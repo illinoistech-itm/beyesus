@@ -30,8 +30,10 @@ cat << EOT >> /etc/hosts
 192.168.33.201  graphiteb graphiteb.example.com
 192.168.33.202  graphitemc graphitemc.example.com
 EOT
+
 ## Command to change hostname
 sudo hostnamectl set-hostname riemannmc
+
 # Install software
 # 1 we will need openjdk-8-jre (java runtime) and ruby runtimes
 # Examples:
@@ -43,30 +45,19 @@ sudo apt-get install -y openjdk-8-jre ruby ruby-dev
 wget https://github.com/riemann/riemann/releases/download/0.3.6/riemann_0.3.6_all.deb
 sudo dpkg -i riemann_0.3.6_all.deb
 # 3 we will need some ruby gems 
-sudo gem install riemann-client riemann-tools 
+sudo gem install riemann-client riemann-tools
 # 4 We need to ensure the services are enabled and start succesfully
 sudo systemctl enable riemann
 sudo systemctl start riemann
-# firewalld install
-sudo apt-get install -y firewalld
-sudo systemctl enable firewalld
-sudo systemctl start firewalld
-sudo systemctl status firewalld
-sudo firewall-cmd --list-all 
-sudo firewall-cmd --zone=public --add-port=5555/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=5556/udp --permanent
-sudo firewall-cmd --zone=public --add-port=5557/tcp --permanent
-sudo firewall-cmd --reload
-sudo firewall-cmd --list-all 
-#clone in to beyesus
-git clone git@github.com:illinoistech-itm/beyesus.git
-cp -v beyesus/itmo-553/week-07/riemann/riemannmc/riemann.config /etc/riemann/riemann.config
+
+git clone git@github.com:illinoistech-itm/sample-student.git
+cp -v sample-student/itmo-453/week-07/riemann/riemannmc/riemann.config /etc/riemann/riemann.config
 
 ####################################################
 # Make directory for *.clj files
 ####################################################
 sudo mkdir -p /etc/riemann/examplecom/etc
-cp -v beyesus/itmo-553/week-09/examplecom/etc/*.clj /etc/riemann/examplecom/etc/
+cp -v sample-student/itmo-453/week-09/examplecom/etc/*.clj /etc/riemann/examplecom/etc/
 
 #####################################################
 # Use sed to replace the default graphitea values
@@ -93,13 +84,9 @@ sudo systemctl stop collectd
 #####################################################
 # Copy the collectd configuration files from week-12
 #####################################################
-sudo mkdir -p /etc/collectd.conf.d/
-cp -v beyesus/itmo-553/week-12/collectd/collectd.conf /etc/
+cp -v sample-student/itmo-453/week-12/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
 
-cp -v beyesus/itmo-553/week-12/collectd/riemann/collectd.conf.d/* /etc/collectd.conf.d/
-echo "postfix postfix/main_mailer_type string 'Internet Site'" | sudo debconf-set-selections
-echo "postfix postfix/mailname string riemannmc.example.com" | sudo debconf-set-selections
-sudo apt-get install -y mailutils
+cp -v sample-student/itmo-453/week-12/collectd.conf /etc/collectd/
 
 sudo systemctl daemon-reload
 sudo systemctl start collectd
@@ -108,5 +95,3 @@ sudo systemctl start collectd
 # Using sed to find and replace riemanna in the write_riemann.conf collectd conf file
 #######################################################
 sed -i 's/"riemanna"/"riemannb"/' /etc/collectd/collectd.conf.d/write_riemann.conf
-
-rm ~/.ssh/id_rsa*
