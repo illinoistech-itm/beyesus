@@ -50,14 +50,14 @@ sudo gem install riemann-client riemann-tools
 sudo systemctl enable riemann
 sudo systemctl start riemann
 
-git clone git@github.com:illinoistech-itm/sample-student.git
-cp -v sample-student/itmo-453/week-07/riemann/riemannmc/riemann.config /etc/riemann/riemann.config
+git clone git@github.com:illinoistech-itm/beyesus.git
+cp -v beyesus/itmo-553/week-07/riemann/riemannmc/riemann.config /etc/riemann/riemann.config
 
 ####################################################
 # Make directory for *.clj files
 ####################################################
 sudo mkdir -p /etc/riemann/examplecom/etc
-cp -v sample-student/itmo-453/week-09/examplecom/etc/*.clj /etc/riemann/examplecom/etc/
+cp -v beyesus/itmo-553/week-09/examplecom/etc/*.clj /etc/riemann/examplecom/etc/
 
 #####################################################
 # Use sed to replace the default graphitea values
@@ -84,9 +84,9 @@ sudo systemctl stop collectd
 #####################################################
 # Copy the collectd configuration files from week-12
 #####################################################
-cp -v sample-student/itmo-453/week-12/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
+cp -v beyesus/itmo-553/week-12/collectd/riemann/collectd.conf.d/* /etc/collectd/collectd.conf.d/
 
-cp -v sample-student/itmo-453/week-12/collectd.conf /etc/collectd/
+cp -v beyesus/itmo-553/week-12/collectd/collectd.conf /etc/collectd/
 
 sudo systemctl daemon-reload
 sudo systemctl start collectd
