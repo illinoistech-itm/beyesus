@@ -63,7 +63,18 @@ sudo gem install riemann-client riemann-tools
 # 4 We need to ensure the services are enabled and start succesfully
 sudo systemctl enable riemann
 sudo systemctl start riemann
-
+# firewalld install
+sudo apt-get install firewalld
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo systemctl status firewalld
+sudo firewall-cmd --list-all 
+sudo firewalll-cmd --zone=public --add-port=5555/tcp --permanent
+sudo firewalll-cmd --zone=public --add-port=5556/udp --permanent
+sudo firewalll-cmd --zone=public --add-port=5557/tcp --permanent
+sudo firewalll-cmd --reload
+sudo firewalll-cmd --list-all 
+#clone in to beyesus
 git clone git@github.com:illinoistech-itm/beyesus.git
 cp -v beyesus/itmo-553/week-07/riemann/riemannb/riemann.config /etc/riemann/riemann.config
 
