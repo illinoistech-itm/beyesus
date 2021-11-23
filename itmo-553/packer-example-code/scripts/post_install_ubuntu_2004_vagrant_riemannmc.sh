@@ -91,6 +91,8 @@ sudo apt-get update -y
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | sudo debconf-set-selections
 echo "postfix postfix/mailname string riemannmc.example.com" | sudo debconf-set-selections
 sudo apt-get install -y mailutils
+sudo apt-get install -y collectd
+sudo systemctl enable collectd
 sudo systemctl stop collectd
 
 #####################################################
