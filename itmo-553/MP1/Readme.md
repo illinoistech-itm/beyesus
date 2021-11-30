@@ -49,6 +49,8 @@ Your virtual machines need to be built using a packer build script and using a p
 * Configure the Graphite.clj plugin to send **tagged** collectd metrics to graphitemc
 * Configure the Firewall (firewalld to open only the needed ports, 22, 5555,5556, and 5557)
 * Configure the Email.clj plugin to send an email if either riemanna or riemmanb service stops sending metrics (you can test this by stopping the Riemann service on Riemanna or Riemannb -- generating a fault).
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/7771250/144108566-5d492fac-db8d-4377-b4d4-3934563c59df.png">
+
 
 #### Graphitea Requirements
 
@@ -110,11 +112,23 @@ Your virtual machines need to be built using a packer build script and using a p
 * Configure 3 Dashboards, one for each Production region
 * In each dashboard create the following panels:
   * Reimann streams latency
+  <img width="1436" alt="image" src="https://user-images.githubusercontent.com/7771250/144107289-6fa76ed6-e869-4b4f-bbaf-1043d208c9cf.png">
+
   * Carbon Process
-  * Collectd process  
+  <img width="1439" alt="image" src="https://user-images.githubusercontent.com/7771250/144107202-a70bd331-8677-4ed6-8c35-9bff399083c7.png">
+
+  * Collectd process 
+  <img width="1103" alt="image" src="https://user-images.githubusercontent.com/7771250/144106950-9281ee22-d9c4-487f-8295-99e69ef12d01.png">
+ 
   * Group by CPU (user and system) for all hosts
+  <img width="1434" alt="image" src="https://user-images.githubusercontent.com/7771250/144107377-ca8b080d-8142-4b89-9c7a-71c80469c1c1.png">
+
   * Alias by Memory (used) all hosts
+  <img width="1435" alt="image" src="https://user-images.githubusercontent.com/7771250/144107447-f0618ce5-19f6-4b07-9289-361717138719.png">
+
   * Alias by Disk used (df root_percent bytes)
+  <img width="1439" alt="image" src="https://user-images.githubusercontent.com/7771250/144108260-5791ac5d-4e59-4883-bd9d-aa29d88431b8.png">
+
 * Once all charts are created use the **export** feature in Grafana to export your graphs into json format -- only 1 system is needed graphitea.  Include these json files in your mp1 folder.
 
 ## Deliverable
